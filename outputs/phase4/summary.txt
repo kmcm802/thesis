@@ -1,0 +1,52 @@
+PHASE 4 SUMMARY
+=======================================================
+
+VAL-1 — Validation strategy comparison
+----------------------------------------
+  GP-M52          10fold_cv        mean=0.2177  std=0.0508
+  GP-M52          5fold_cv         mean=0.3145  std=0.0561
+  GP-M52          holdout_80_20    mean=0.2928  std=0.1646
+  GP-M52          loocv            mean=0.1038  std=nan
+  GP-SE           10fold_cv        mean=0.2593  std=0.0637
+  GP-SE           5fold_cv         mean=0.3872  std=0.0986
+  GP-SE           holdout_80_20    mean=0.3846  std=0.2123
+  GP-SE           loocv            mean=0.1290  std=nan
+  GP-SE-noARD     10fold_cv        mean=0.2593  std=0.0637
+  GP-SE-noARD     5fold_cv         mean=0.3872  std=0.0986
+  GP-SE-noARD     holdout_80_20    mean=0.3075  std=0.1326
+  GP-SE-noARD     loocv            mean=0.1290  std=nan
+
+SS-1 — Learning curve findings
+----------------------------------------
+  N= 10  RMSE=3.7411 V
+  N= 15  RMSE=2.0599 V
+  N= 20  RMSE=2.0424 V
+  N= 30  RMSE=1.1812 V
+  N= 40  RMSE=1.2362 V
+  N= 50  RMSE=1.1811 V
+  N= 75  RMSE=0.7837 V
+  N=100  RMSE=0.5456 V
+  N=125  RMSE=0.2956 V
+  N=150  RMSE=0.2932 V
+
+Part F — Calibration
+----------------------------------------
+      model     output  nominal  empirical
+     GP-M52 v_out_mean     0.50   0.570513
+     GP-M52 v_out_mean     0.80   0.799145
+     GP-M52 v_out_mean     0.90   0.848291
+     GP-M52 v_out_mean     0.95   0.886752
+      GP-SE v_out_mean     0.50   0.459402
+      GP-SE v_out_mean     0.80   0.694444
+      GP-SE v_out_mean     0.90   0.775641
+      GP-SE v_out_mean     0.95   0.822650
+GP-SE-noARD v_out_mean     0.50   0.459402
+GP-SE-noARD v_out_mean     0.80   0.694444
+GP-SE-noARD v_out_mean     0.90   0.775641
+GP-SE-noARD v_out_mean     0.95   0.822650
+
+Spearman ρ (v_out_mean):
+      model     output  spearman_rho      p_value
+     GP-M52 v_out_mean      0.610546 3.813491e-49
+      GP-SE v_out_mean      0.473239 1.709570e-27
+GP-SE-noARD v_out_mean      0.473239 1.709570e-27

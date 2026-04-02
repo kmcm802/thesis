@@ -1,0 +1,61 @@
+PHASE 0 — SIMULATOR VALIDATION
+Fixed params: {'L': 0.0001, 'C': 0.0001, 'R_L': 0.1, 'R_sw': 0.05, 'V_d': 0.7}
+Design space: {'D': (0.2, 0.8), 'V_in': (8.0, 24.0), 'R': (5.0, 100.0), 'f_sw': (20000.0, 200000.0)}
+
+============================================================
+TEST 1: Ideal-case check (R_L=0, R_sw=0, V_d=0)
+============================================================
+  V_out:      24.0000 V  (expected 24.0 V,  error 0.000%)
+  I_L:        4.8000 A  (expected 4.8 A,   error 0.000%)
+  efficiency: 1.000000   (expected 1.0,     error 0.0000%)
+  CCM OK:     True
+  Result: PASS
+
+============================================================
+TEST 2: Parasitic check (default parasitics)
+============================================================
+  V_out (ideal):     24.0000 V
+  V_out (parasitic): 22.1905 V  (lower? True)
+  efficiency:        0.9246   (< 1? True)  in [0.75, 0.98]? True
+  V_out in [20,24]?  True
+  Result: PASS
+
+============================================================
+TEST 3: Monotonicity checks
+============================================================
+  3a: D sweep  → V_out monotone increasing? True
+  3b: V_in sweep → V_out monotone increasing? True
+  3c: R sweep → efficiency Spearman r=1.000 (want > 0.8)? True
+  3d: f_sw sweep → i_l_ripple monotone decreasing? True
+  Result: PASS
+
+============================================================
+TEST 4: Convergence check (rtol = 1e-4 vs 1e-6 vs 1e-8)
+============================================================
+  V_out (rtol=1e-4): 22.190476 V
+  V_out (rtol=1e-6): 22.190476 V   change from 1e-4: 0.0000%
+  V_out (rtol=1e-8): 22.190476 V   change from 1e-6: 0.0000%
+  Convergence at rtol=1e-6 (< 0.1% change to 1e-8)? PASS
+  Result: PASS
+
+============================================================
+TEST 5: Timing (100 simulations)
+============================================================
+  n simulations : 100
+  mean time     : 0.01 ms
+  std           : 0.00 ms
+  min / max     : 0.01 / 0.05 ms
+  total wall    : 0.00 s
+  Timing saved  : outputs/phase0_timing.csv
+  Result: PASS (informational)
+
+============================================================
+SUMMARY
+============================================================
+  Test 1 — Ideal-case             PASS
+  Test 2 — Parasitic              PASS
+  Test 3 — Monotonicity           PASS
+  Test 4 — Convergence            PASS
+  Test 5 — Timing                 PASS
+
+  OVERALL: ALL TESTS PASSED

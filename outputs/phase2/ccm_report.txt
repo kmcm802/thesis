@@ -1,0 +1,39 @@
+PHASE 2 — CCM BOUNDARY REPORT
+==================================================
+
+CCM Analysis — Training set (N=200)
+----------------------------------------
+  Total points  : 200
+  CCM valid     : 187  (93.5%)
+  DCM violations: 13  (6.5%)
+
+  DCM parameter ranges:
+    D    : [0.213, 0.606]
+    V_in : [8.32, 21.41] V
+    R    : [37.9, 98.5] Ω
+    f_sw : [20.1, 63.9] kHz
+
+  Note: DCM points excluded from surrogate training.
+  The averaged ODE model is only valid in CCM.
+  Condition: i_L_min = i_l_mean - ΔI_L/2 > 0
+             where ΔI_L = V_in·D / (L·f_sw)
+
+CCM Analysis — Test set     (N=500)
+----------------------------------------
+  Total points  : 500
+  CCM valid     : 445  (89.0%)
+  DCM violations: 55  (11.0%)
+
+  DCM parameter ranges:
+    D    : [0.202, 0.689]
+    V_in : [8.01, 23.73] V
+    R    : [31.5, 97.3] Ω
+    f_sw : [20.3, 191.9] kHz
+
+  Note: DCM points excluded from surrogate training.
+  The averaged ODE model is only valid in CCM.
+  Condition: i_L_min = i_l_mean - ΔI_L/2 > 0
+             where ΔI_L = V_in·D / (L·f_sw)
+
+Action taken: DCM rows kept in CSV (ccm_ok=False) but excluded
+from all surrogate training and evaluation via NaN masking.

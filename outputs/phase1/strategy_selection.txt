@@ -1,0 +1,17 @@
+DoE Strategy Selection
+==================================================
+
+Primary output: v_out_mean
+Criterion: avg RMSE (N≥60) + 0.3 × seed std, both normalised to [0,1]
+
+             avg_rmse_N60plus  rmse_std_seeds  norm_rmse  norm_std     score
+strategy
+lhs                  0.889505        0.186408   0.925884  0.968326  1.216382
+maximin_lhs          0.867506        0.186460   0.902986  0.968594  1.193564
+random               0.960709        0.192506   1.000000  1.000000  1.300000
+
+Selected strategy: maximin_lhs
+
+Rationale:
+  'maximin_lhs' achieved the lowest combined score of 1.1936.
+  This strategy is used for full dataset generation.

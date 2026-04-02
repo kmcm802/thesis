@@ -1,0 +1,21 @@
+Top Models by v_out_mean RMSE
+==================================================
+
+Ranked by RMSE on v_out_mean (test set, N_train=100):
+
+  config_id     family     rmse    nrmse       r2      mae
+     GP-M52    Kriging 0.545557 0.005811 0.999081 0.181321
+      GP-SE    Kriging 0.598831 0.006378 0.998893 0.204487
+GP-SE-noARD    Kriging 0.598831 0.006378 0.998893 0.204487
+GP-SE-nonug    Kriging 0.605079 0.006445 0.998870 0.216627
+     GP-M32    Kriging 0.750436 0.007993 0.998261 0.240193
+   POLY-3-L Polynomial 1.226954 0.013068 0.995352 0.651691
+  NN-M-tanh     Neural 1.281862 0.013653 0.994926 0.605861
+      RBF-C        RBF 1.347831 0.014356 0.994391 0.600665
+     POLY-3 Polynomial 1.359000 0.014474 0.994297 0.791812
+    RBF-TPS        RBF 1.743789 0.018573 0.990611 0.782923
+
+Top 3 selected: ['GP-M52', 'GP-SE', 'GP-SE-noARD']
+Families: ['Kriging', 'Kriging', 'Kriging']
+
+These models are used in the subsequent validation and engineering analyses.
