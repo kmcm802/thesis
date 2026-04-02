@@ -1,6 +1,6 @@
 # Surrogate Modelling for a DC-DC Boost Converter
 
-MAI Thesis — Killian McMahon — Trinity College Dublin, 2026
+BSC Thesis — Killian McMahon — Trinity College Dublin, 2026
 
 ## What this is
 
