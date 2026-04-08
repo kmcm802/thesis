@@ -74,7 +74,7 @@ FIG.mkdir(parents=True, exist_ok=True)
 TRAIN_CSV = ROOT / "outputs" / "phase2" / "train_200.csv"
 TEST_CSV  = ROOT / "outputs" / "phase2" / "test_500.csv"
 
-BEST_MODEL = "GP-M52"
+BEST_MODEL = "GP-SE"
 BUILD = {cid: fn for cid, _, fn in MODEL_REGISTRY}
 
 MODEL_COLOR = {

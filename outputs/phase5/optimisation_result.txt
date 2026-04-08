@@ -4,14 +4,14 @@ Objective:   maximise efficiency (η)
 Constraint:  V_out ≥ 30 V
 Fixed:       R = 20 Ω,  f_sw = 100 kHz
 
-Optimal D    = 0.2632
+Optimal D    = 0.2259
 Optimal V_in = 24.000 V
-η_opt        = 0.9688  (96.88 %)
-V_out_opt    = 31.502 V
+η_opt        = 0.9689  (96.89 %)
+V_out_opt    = 30.000 V
 
 All predicted outputs at optimum:
-  v_out_mean         = 31.5023
-  i_l_mean           = 1.9643
-  v_out_ripple       = 0.0380
-  i_l_ripple         = 0.6285
-  efficiency         = 0.9688
+  v_out_mean         = 30.0000
+  i_l_mean           = 1.7994
+  v_out_ripple       = 0.0382
+  i_l_ripple         = 0.5543
+  efficiency         = 0.9689
